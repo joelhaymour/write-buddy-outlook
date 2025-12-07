@@ -10,9 +10,9 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Write Buddy" />
   <Description DefaultValue="AI-powered text rewriting: Improve wording, fact-check content, or make it persuasive. Preserves formatting and fixes capitalization errors." />
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://localhost:3000/support" />
+  <IconUrl DefaultValue="https://40d12b37b455.ngrok.app/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://40d12b37b455.ngrok.app/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://40d12b37b455.ngrok.app/support.html" />
   <AppDomains>
     <AppDomain>https://api.openai.com</AppDomain>
   </AppDomains>
@@ -27,7 +27,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+        <SourceLocation DefaultValue="https://40d12b37b455.ngrok.app/taskpane.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -100,14 +100,14 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
-          <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-          <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+          <bt:Image id="Icon.16x16" DefaultValue="https://40d12b37b455.ngrok.app/assets/icon-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://40d12b37b455.ngrok.app/assets/icon-32.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://40d12b37b455.ngrok.app/assets/icon-80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://localhost:3000/getstarted.html"/>
-          <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
-          <bt:Url id="TaskPane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+          <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://40d12b37b455.ngrok.app/getstarted.html"/>
+          <bt:Url id="Commands.Url" DefaultValue="https://40d12b37b455.ngrok.app/commands.html"/>
+          <bt:Url id="TaskPane.Url" DefaultValue="https://40d12b37b455.ngrok.app/taskpane.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="GetStarted.LearnMoreAbout" DefaultValue="Learn more about Write Buddy"/>
