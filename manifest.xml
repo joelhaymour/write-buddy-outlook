@@ -65,10 +65,10 @@
               </OfficeTab>
             </ExtensionPoint>
             <ExtensionPoint xsi:type="MessageReadCommandSurface">
-              <OfficeTab id="TabDefault">
-                <Group id="msgReadGroup">
+              <OfficeTab id="TabReadDefault">
+                <Group id="msgReadGroupRead">
                   <Label resid="GroupLabel" />
-                  <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                  <Control xsi:type="Button" id="msgReadOpenPaneButtonRead">
                     <Label resid="TaskPaneButton.Label" />
                     <Supertip>
                       <Title resid="TaskPaneButton.Label" />
