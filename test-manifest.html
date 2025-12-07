@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manifest Test</title>
+</head>
+<body>
+    <h1>Testing Manifest URLs</h1>
+    <div id="results"></div>
+    <script>
+        const urls = [
+            'https://d83d8093f4b7.ngrok.app/manifest.xml',
+            'https://d83d8093f4b7.ngrok.app/taskpane.html',
+            'https://d83d8093f4b7.ngrok.app/taskpane.js',
+            'https://d83d8093f4b7.ngrok.app/taskpane.css',
+            'https://d83d8093f4b7.ngrok.app/commands.html',
+            'https://d83d8093f4b7.ngrok.app/assets/icon-16.png',
+            'https://d83d8093f4b7.ngrok.app/assets/icon-32.png',
+            'https://d83d8093f4b7.ngrok.app/assets/icon-64.png',
+            'https://d83d8093f4b7.ngrok.app/assets/icon-80.png'
+        ];
+        
+        const results = document.getElementById('results');
+        
+        urls.forEach(url => {
+            fetch(url)
+                .then(response => {
+                    const div = document.createElement('div');
+                    div.innerHTML = `${url}: <span style="color: green;">✅ ${response.status} ${response.statusText}</span>`;
+                    results.appendChild(div);
+                })
+                .catch(error => {
+                    const div = document.createElement('div');
+                    div.innerHTML = `${url}: <span style="color: red;">❌ ${error.message}</span>`;
+                    results.appendChild(div);
+                });
+        });
+    </script>
+</body>
+</html>
+
