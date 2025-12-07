@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:type="MailApp">
+  <Id>936c1598-89c3-45d6-9c64-4473827338e6</Id>
+  <Version>1.0.0</Version>
+  <ProviderName>Write Buddy</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Write Buddy" />
+  <Description DefaultValue="AI-powered text rewriting tool" />
+  <IconUrl DefaultValue="https://d83d8093f4b7.ngrok.app/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://d83d8093f4b7.ngrok.app/assets/icon-64.png"/>
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+  <FormSettings>
+    <Form xsi:type="ItemEdit">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://d83d8093f4b7.ngrok.app/taskpane.html"/>
+        <RequestedHeight>450</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+  <Permissions>ReadWriteItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
+  </Rule>
+</OfficeApp>
+
