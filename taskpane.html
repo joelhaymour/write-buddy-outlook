@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Write Buddy</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="taskpane.css" />
+</head>
+<body>
+    <div id="content-header">
+        <div class="ms-CommandBar ms-CommandBar--padded">
+            <h1 class="ms-fontSize-xxl ms-fontWeight-light">✍️ Write Buddy</h1>
+        </div>
+    </div>
+    <div id="content-main">
+        <div class="write-buddy-container">
+            <div class="write-buddy-text-container">
+                <div class="write-buddy-text-box">
+                    <h3>Original Text</h3>
+                    <textarea id="original-text" class="write-buddy-textarea" readonly placeholder="Select text in your email, then click 'Get Selected Text'"></textarea>
+                    <button id="get-selected-text" class="write-buddy-btn-primary">Get Selected Text</button>
+                </div>
+                <div class="write-buddy-text-box">
+                    <h3>Rewritten Text</h3>
+                    <textarea id="rewritten-text" class="write-buddy-textarea" readonly placeholder="Select an option to rewrite..."></textarea>
+                </div>
+            </div>
+            <div class="write-buddy-options">
+                <button id="btn-professional" class="write-buddy-option-btn" data-style="professional">Professional</button>
+                <button id="btn-factcheck" class="write-buddy-option-btn" data-style="factcheck">Fact Check</button>
+                <button id="btn-persuasive" class="write-buddy-option-btn" data-style="persuasive">Persuasive</button>
+                <button id="btn-translate" class="write-buddy-option-btn" data-style="translate">Translate</button>
+            </div>
+            <div class="write-buddy-modal-actions">
+                <button id="btn-insert" class="write-buddy-insert-btn" disabled>Insert</button>
+                <button id="btn-cancel" class="write-buddy-cancel-btn">Clear</button>
+            </div>
+            <div id="status-message" class="status-message"></div>
+        </div>
+        
+        <div class="settings-section">
+            <h3>Settings</h3>
+            <button id="btn-settings" class="write-buddy-btn-secondary">Configure API Key</button>
+            <div class="feature-toggles">
+                <label><input type="checkbox" id="toggle-professional" checked> Professional</label>
+                <label><input type="checkbox" id="toggle-factcheck" checked> Fact Check</label>
+                <label><input type="checkbox" id="toggle-persuasive" checked> Persuasive</label>
+                <label><input type="checkbox" id="toggle-translate" checked> Translate</label>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="taskpane.js"></script>
+</body>
+</html>
+

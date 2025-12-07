@@ -1,0 +1,18 @@
+{
+  "name": "write-buddy-outlook",
+  "version": "1.0.0",
+  "description": "Write Buddy Outlook Add-in",
+  "main": "taskpane.js",
+  "scripts": {
+    "start": "office-addin-dev-certs install && http-server -S -C cert.pem -K key.pem -p 3000 -c-1",
+    "cert": "office-addin-dev-certs install"
+  },
+  "keywords": ["outlook", "add-in", "office"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "office-addin-dev-certs": "^1.11.3",
+    "http-server": "^14.1.1"
+  }
+}
+

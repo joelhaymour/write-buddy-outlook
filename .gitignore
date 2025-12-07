@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# SSL Certificates (don't commit these)
+*.pem
+*.key
+*.crt
+cert.pem
+key.pem
+localhost.crt
+localhost.key
+
+# Office Add-in Dev Certs
+.office-addin-dev-certs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+

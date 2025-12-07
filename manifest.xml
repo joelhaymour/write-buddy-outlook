@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+           xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" 
+           xsi:type="MailApp">
+  <Id>936c1598-89c3-45d6-9c64-4473827338e6</Id>
+  <Version>1.0.0</Version>
+  <ProviderName>Write Buddy</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Write Buddy" />
+  <Description DefaultValue="AI-powered text rewriting: Improve wording, fact-check content, or make it persuasive. Preserves formatting and fixes capitalization errors." />
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://localhost:3000/support" />
+  <AppDomains>
+    <AppDomain>https://api.openai.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+        <RequestedHeight>450</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+  <Permissions>ReadWriteItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
+    <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit" />
+  </Rule>
+  <DisableEntityHighlighting>false</DisableEntityHighlighting>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <bt:Sets DefaultMinVersion="1.3">
+          <bt:Set Name="Mailbox" />
+        </bt:Sets>
+      </Requirements>
+      <Hosts>
+        <Host xsi:type="MailHost">
+          <DesktopFormFactor>
+            <FunctionFile resid="Commands.Url" />
+            <ExtensionPoint xsi:type="MessageComposeCommandSurface">
+              <OfficeTab id="TabDefault">
+                <Group id="msgReadGroup">
+                  <Label resid="GroupLabel" />
+                  <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                    <Label resid="TaskPaneButton.Label" />
+                    <Supertip>
+                      <Title resid="TaskPaneButton.Label" />
+                      <Description resid="TaskPaneButton.Tooltip" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon.16x16"/>
+                      <bt:Image size="32" resid="Icon.32x32"/>
+                      <bt:Image size="80" resid="Icon.80x80"/>
+                    </Icon>
+                    <Action xsi:type="ShowTaskPane">
+                      <TaskPaneId>ButtonId1</TaskPaneId>
+                      <SourceLocation resid="TaskPane.Url" />
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+            <ExtensionPoint xsi:type="MessageReadCommandSurface">
+              <OfficeTab id="TabDefault">
+                <Group id="msgReadGroup">
+                  <Label resid="GroupLabel" />
+                  <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                    <Label resid="TaskPaneButton.Label" />
+                    <Supertip>
+                      <Title resid="TaskPaneButton.Label" />
+                      <Description resid="TaskPaneButton.Tooltip" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon.16x16"/>
+                      <bt:Image size="32" resid="Icon.32x32"/>
+                      <bt:Image size="80" resid="Icon.80x80"/>
+                    </Icon>
+                    <Action xsi:type="ShowTaskPane">
+                      <TaskPaneId>ButtonId1</TaskPaneId>
+                      <SourceLocation resid="TaskPane.Url" />
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+          </DesktopFormFactor>
+        </Host>
+      </Hosts>
+      <Resources>
+        <bt:Images>
+          <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://localhost:3000/getstarted.html"/>
+          <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
+          <bt:Url id="TaskPane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="GetStarted.LearnMoreAbout" DefaultValue="Learn more about Write Buddy"/>
+          <bt:String id="GetStarted.Title" DefaultValue="Get started with Write Buddy!"/>
+          <bt:String id="GroupLabel" DefaultValue="Write Buddy"/>
+          <bt:String id="TaskPaneButton.Label" DefaultValue="Open Write Buddy"/>
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="GetStarted.LearnMore" DefaultValue="Write Buddy helps you rewrite text with AI-powered options."/>
+          <bt:String id="GetStarted.Description" DefaultValue="Select text in your email and use Write Buddy to improve, fact-check, make persuasive, or translate it."/>
+          <bt:String id="TaskPaneButton.Tooltip" DefaultValue="Open Write Buddy to rewrite selected text"/>
+        </bt:LongStrings>
+      </Resources>
+    </VersionOverrides>
+  </VersionOverrides>
+</OfficeApp>
+
